@@ -1,0 +1,88 @@
+<html>
+<body>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map"></div>
+
+
+
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#map{
+  height: 100%;
+  margin: 0;
+}
+html, body, #map {
+  height: 100%;
+  margin: 0;
+}
+html, body, #map {
+  height: 100%;
+  margin: 0;
+}
+html, body, #map {
+  height: 100%;
+  margin: 0;
+}
+
+
+</style>
+
+
+<script>
+var mapOptions = {
+    center: new google.maps.LatLng(28.6213, 77.0918),
+    zoom: 20,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+
+new google.maps.Map(document.getElementById('map'), mapOptions);
+var mapOptions = {
+    center: new google.maps.LatLng(28.6213, 77.0918),
+    zoom: 20,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+var markerOptions = {
+    position: new google.maps.LatLng(28.6213, 77.0918)
+};
+var marker = new google.maps.Marker(markerOptions);
+marker.setMap(map);
+var mapOptions = {
+    center: new google.maps.LatLng(28.6213, 77.0918),
+    zoom: 20,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+var markerOptions = {
+    position: new google.maps.LatLng(28.6213, 77.0918),
+    map: map
+};
+var marker = new google.maps.Marker(markerOptions);
+marker.setMap(map);
+
+var infoWindowOptions = {
+    content: '  Maharaja Surajmal Group of Institutions'
+};
+
+var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+google.maps.event.addListener(marker,'click',function(e){
+  
+  infoWindow.open(map, marker);
+  
+});
+
+</script>
+</body>
+</html>
